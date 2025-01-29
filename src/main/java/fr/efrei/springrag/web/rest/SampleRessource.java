@@ -21,7 +21,6 @@ public class SampleRessource {
     public Sample helloJson(@PathVariable(value = "id", required = false) final String id) {
         return samples.get(id);
     }
-
     @PostMapping("/dto")
     public Sample create(@RequestBody Sample sample) {
         samples.put(String.valueOf(id++), sample);
