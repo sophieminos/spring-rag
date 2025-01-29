@@ -1,4 +1,4 @@
-package fr.efrei.springrag.web.service;
+package fr.efrei.springrag.service;
 
 import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.spring.AiService;

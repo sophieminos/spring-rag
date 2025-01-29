@@ -1,7 +1,7 @@
 package fr.efrei.springrag.web.rest;
 
 import fr.efrei.springrag.domain.Document;
-import fr.efrei.springrag.web.service.DocumentService;
+import fr.efrei.springrag.service.DocumentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.slf4j.Logger;
@@ -52,4 +52,11 @@ public class DocumentResource {
         documentService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+
+    @PostMapping("/chat2/{user}")
+    public String chat2(@RequestBody String query) throws InterruptedException {
+        String result = documentService.chat(query);
+        return result;
+    }
+
 }
