@@ -1,7 +1,7 @@
 
 package fr.efrei.springrag.web.rest;
 
-import fr.efrei.springrag.web.service.AssistantAiService;
+import fr.efrei.springrag.service.AssistantAiService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
