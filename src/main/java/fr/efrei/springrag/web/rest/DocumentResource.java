@@ -45,4 +45,11 @@ public class DocumentResource {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteDocument(@PathVariable Long id) {
+        log.debug("REST request to delete Document: {}", id);
+        documentService.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
 }
